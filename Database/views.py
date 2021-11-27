@@ -16,3 +16,11 @@ class ItemView(generics.ListAPIView):
     queryset = models.Item.objects.all()
     serializer_class = serializers.ItemSerializer
     filterset_fields = ['type']
+
+class ItemCreate(generics.CreateAPIView):
+    queryset = models.Item.objects.all()
+    serializer_class = serializers.ItemSerializer
+
+class ItemEdit(generics.RetrieveUpdateDestroyAPIView):
+    queryset = models.Item.objects.all()
+    serializer_class = serializers.ItemSerializer

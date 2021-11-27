@@ -5,7 +5,7 @@ class Item(models.Model):
     maSP = models.AutoField(primary_key=True)
     tenSP = models.CharField(max_length=20)
     giaBan = models.FloatField()
-    hinhAnh = models.ImageField()
+    hinhAnh = models.FileField(upload_to='images')
     available = models.BooleanField()
     moTa = models.TextField()
     type = models.CharField(max_length=10)

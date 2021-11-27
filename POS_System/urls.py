@@ -19,5 +19,7 @@ import Database.views as views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/Item', views.ItemView.as_view())
+    path('api/Item', views.ItemView.as_view()),
+    path('api/addItem', views.ItemCreate.as_view()),
+    path('api/editItem/<int:pk>', views.ItemEdit.as_view())
 ]
